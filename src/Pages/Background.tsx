@@ -1,7 +1,7 @@
 
 export default function Background() {
   return (
-    <div className="background">
+    <div className="aboutme">
       <h1>Background</h1>
       <p>Previous work experience includes leadership roles in award-winning restaurant environments, along with recognition such as Zagat’s 30 Under 30 New Orleans (2015) and Imbibe Magazine’s “Imbibe 75” (2016) for work in cocktail beverage programs, with a focus on clear, hand-cut ice and frozen drinks.
         This includes time as a working floor sommelier, as well as service experience in some of the most respected restaurants in the industry. Together, this work contributes to a strong understanding of precision, timing, and high-level guest experience.

@@ -36,6 +36,8 @@ function AppInner() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/connect" element={<Connect />} />
         <Route path="/*" element={<ViewSwitcher view={currentView} />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/:slug" element={<Portfolio />} />
       </Routes>
     </>
   )

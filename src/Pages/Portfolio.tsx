@@ -1,11 +1,71 @@
+import { useState, useRef } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
+import { projects } from '../data/projects'
+import ProjectCard from '../components/ProjectCard'
 
-export default function Portfolio(){
+export default function Portfolio() {
+  console.log(projects)
+  const { slug } = useParams()
+  const navigate = useNavigate()
+  const [activeSlug, setActiveSlug] = useState<string | null>(slug ?? null)
+  const holdTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  function slugify(title: string) {
+    return title.toLowerCase().replace(/\s+/g, '-')
+  }
+
+  function handleSelect(title: string) {
+    const s = slugify(title)
+    if (activeSlug === s) {
+      setActiveSlug(null)
+      navigate('/portfolio')
+    } else {
+      setActiveSlug(s)
+      navigate(`/portfolio/${s}`)
+    }
+  }
+
+  function handleHoldStart(liveUrl: string) {
+    holdTimer.current = setTimeout(() => {
+      if (liveUrl !== '#') {
+        window.open(liveUrl, '_blank', 'noreferrer')
+      }
+    }, 600)
+  }
+
+  function handleHoldEnd() {
+    if (holdTimer.current) {
+      clearTimeout(holdTimer.current)
+      holdTimer.current = null
+    }
+  }
+
   return (
     <div>
-      <h1>Blood, Sweat, & Tears: </h1>
-      <div>PortFolio Component</div>
-      <div>Portfolio Description</div>
-      <div>Portfolio Link</div>
+      <h1>Blood, Sweat, & Tears</h1>
+      <div>
+        {projects.map(project => {
+          const s = slugify(project.title)
+          const isActive = activeSlug === s
+          const isReceded = activeSlug !== null && !isActive
+
+          return (
+            <div
+              key={project.title}
+              data-active={isActive}
+              data-receded={isReceded}
+              onClick={() => handleSelect(project.title)}
+              onMouseDown={() => handleHoldStart(project.liveUrl)}
+              onMouseUp={handleHoldEnd}
+              onMouseLeave={handleHoldEnd}
+              onTouchStart={() => handleHoldStart(project.liveUrl)}
+              onTouchEnd={handleHoldEnd}
+            >
+              <ProjectCard {...project} />
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

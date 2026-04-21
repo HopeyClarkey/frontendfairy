@@ -1,32 +1,49 @@
 export default function Skillsets() {
-
   return (
     <div>
       <h1>Skillsets</h1>
-      <p>
+
+      <div>
         <h2>Front-End Development</h2>
-        React & component-based architecture  |
-        State management & user flow logic  |
-        Responsive design & layout systems  |
-        Styling systems (CSS, Tailwind, design tokens)  |
-        UI interaction patterns & micro interactions  |
-        <h2>BackEnd Development</h2>
-        Server-side logic and application structure  |
-        API design and data flow  |
-        Database modeling and persistence patterns  |
-        Authentication, sessions, and user state handling  |
+        <ul>
+          <li>React & component-based architecture</li>
+          <li>State management & user flow logic</li>
+          <li>Responsive design & layout systems</li>
+          <li>Styling systems (CSS, Tailwind, design tokens)</li>
+          <li>UI interaction patterns & micro interactions</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Back-End Development</h2>
+        <ul>
+          <li>Server-side logic and application structure</li>
+          <li>API design and data flow</li>
+          <li>Database modeling and persistence patterns</li>
+          <li>Authentication, sessions, and user state handling</li>
+        </ul>
+      </div>
+
+      <div>
         <h2>Design & UX</h2>
-        Strong visual design instincts  |
-        Information hierarchy & layout clarity  |
-        Designing for emotional experience, not just usability  |
-        Translating abstract ideas into intuitive interfaces  |
-        <h2>Soft Skills:</h2>
-        Extensive people management skills with teams of all sizes.  |
-        Ease in translating between technical and non-technical perspectives  |
-        High ownership and follow-through  |
-        Calm decision-making in fast-paced environments  |
-        Deep attention to detail without losing the big picture  |
-      </p>
+        <ul>
+          <li>Strong visual design instincts</li>
+          <li>Information hierarchy & layout clarity</li>
+          <li>Designing for emotional experience, not just usability</li>
+          <li>Translating abstract ideas into intuitive interfaces</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Soft Skills</h2>
+        <ul>
+          <li>Extensive people management skills with teams of all sizes</li>
+          <li>Ease in translating between technical and non-technical perspectives</li>
+          <li>High ownership and follow-through</li>
+          <li>Calm decision-making in fast-paced environments</li>
+          <li>Deep attention to detail without losing the big picture</li>
+        </ul>
+      </div>
     </div>
   )
 }
