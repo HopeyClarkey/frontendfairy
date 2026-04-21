@@ -4,24 +4,18 @@ import { projects } from '../data/projects'
 import ProjectCard from '../components/ProjectCard'
 
 export default function Portfolio() {
-  console.log(projects)
   const { slug } = useParams()
   const navigate = useNavigate()
   const [activeSlug, setActiveSlug] = useState<string | null>(slug ?? null)
   const holdTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  function slugify(title: string) {
-    return title.toLowerCase().replace(/\s+/g, '-')
-  }
-
-  function handleSelect(title: string) {
-    const s = slugify(title)
-    if (activeSlug === s) {
+  function handleSelect(slug: string) {
+    if (activeSlug === slug) {
       setActiveSlug(null)
       navigate('/portfolio')
     } else {
-      setActiveSlug(s)
-      navigate(`/portfolio/${s}`)
+      setActiveSlug(slug)
+      navigate(`/portfolio/${slug}`)
     }
   }
 
@@ -41,18 +35,17 @@ export default function Portfolio() {
   }
 
   return (
-    <div className= "portfolio background2">
+    <div className="portfolio background2">
       <h1>Blood, Sweat, & Tears</h1>
       <div className="carousel carousel-vertical w-full gap-4 p-4">
         {projects.map(project => {
-          const s = project.slug
-          const isActive = activeSlug === s
+          const isActive = activeSlug === project.slug
           const isReceded = activeSlug !== null && !isActive
 
           return (
             <div
               className="carousel-item"
-              key={project.title}
+              key={project.slug}
               data-active={isActive}
               data-receded={isReceded}
               onClick={() => handleSelect(project.slug)}

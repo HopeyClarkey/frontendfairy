@@ -159,10 +159,10 @@ export default function Connect() {
         )}
       </form>
 
-      <div>
+      <div className="social-links">
         <p>Find Me On:</p>
         <a
-        className="btn"
+        className="btn glass-btn"
         href="https://www.instagram.com/frontendfairy"
         target="_blank"
         rel="noreferrer"
@@ -170,7 +170,7 @@ export default function Connect() {
           Instagram
         </a> <br/>
         <a
-        className="btn"
+        className="btn glass-btn"
         href="https://www.linkedin.com/in/hope-clarke-ice"
         target="_blank"
         rel="noreferrer"

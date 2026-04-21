@@ -1,4 +1,4 @@
-import { useState,  } from 'react'
+import { useState } from 'react'
 import LandingPage from './Pages/Landing'
 import Background from './Pages/Background'
 import Skillsets from './Pages/Skillsets'
@@ -6,7 +6,6 @@ import Portfolio from './Pages/Portfolio'
 import Connect from './Pages/Connect'
 import NavMenu from './components/NavMenu'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-
 
 const urlToView: Record<string, string> = {
   '/': 'LandingPage',
@@ -34,10 +33,9 @@ function AppInner() {
       <NavMenu setView={setView} />
       <Routes>
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/:slug" element={<Portfolio />} />
         <Route path="/connect" element={<Connect />} />
         <Route path="/*" element={<ViewSwitcher view={currentView} />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/portfolio/:slug" element={<Portfolio />} />
       </Routes>
     </>
   )
