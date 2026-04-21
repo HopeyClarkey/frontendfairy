@@ -2,6 +2,7 @@
 export default function LandingPage(){
 
   return (
+    <div className="mc">
     <div className="background1">
       <span className="top">
         <h1 className="maintitle">
@@ -18,7 +19,7 @@ export default function LandingPage(){
     </p>
     </div>
     </div>
-
+</div>
 
   )
 

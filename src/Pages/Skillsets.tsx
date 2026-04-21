@@ -3,7 +3,7 @@ export default function Skillsets() {
     <div className="skillsets background2">
       <h1>Skillsets</h1>
 
-      <div>
+      <div className="text-panel">
         <h2>Front-End Development</h2>
         <ul>
           <li>React & component-based architecture</li>
@@ -14,7 +14,7 @@ export default function Skillsets() {
         </ul>
       </div>
 
-      <div>
+      <div className="text-panel">
         <h2>Back-End Development</h2>
         <ul>
           <li>Server-side logic and application structure</li>
@@ -24,7 +24,7 @@ export default function Skillsets() {
         </ul>
       </div>
 
-      <div>
+      <div className="text-panel">
         <h2>Design & UX</h2>
         <ul>
           <li>Strong visual design instincts</li>
@@ -34,7 +34,7 @@ export default function Skillsets() {
         </ul>
       </div>
 
-      <div>
+      <div className="text-panel">
         <h2>Soft Skills</h2>
         <ul>
           <li>Extensive people management skills with teams of all sizes</li>

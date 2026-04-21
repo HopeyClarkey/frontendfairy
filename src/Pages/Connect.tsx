@@ -63,9 +63,13 @@ export default function Connect() {
 
   return (
     <div className="connect background3">
-      <h1>Let's Connect</h1>
-
+      <div style={{display:"flex", flexDirection:"row", justifyContent: "space-around", margin: "5px"}}>
+      <h1 style={{color: "#ceaf83"}}>Let's Connect...</h1>
+      <img src="./public/fairy.svg" style={{height: "150px"}}/>
+      </div>
+      <div className="text-panel">
       <form
+        className="contact"
         name="contact"
         method="POST"
         data-netlify="true"
@@ -115,7 +119,7 @@ export default function Connect() {
         </div>
 
         <div>
-          <label className="label" htmlFor="helpType">What can I help with?</label>
+          <label className="label" htmlFor="helpType">What can I help with?</label><br/>
           <select
             className="select"
             id="helpType"
@@ -132,7 +136,7 @@ export default function Connect() {
         </div>
 
         <div>
-          <label className="label" htmlFor="message">Message</label>
+          <label className="label" htmlFor="message">Message</label><br/>
           <textarea
             className="textarea"
             id="message"
@@ -144,7 +148,7 @@ export default function Connect() {
         </div>
 
         <button
-          className="btn"
+          className="btn glass-btn" style={{alignSelf: "center", color: "#ceaf83"}}
           type="submit"
           disabled={status === 'sending'}
         >
@@ -159,6 +163,8 @@ export default function Connect() {
         )}
       </form>
 
+    </div>
+
       <div className="social-links">
         <p>Find Me On:</p>
         <a
@@ -166,6 +172,7 @@ export default function Connect() {
         href="https://www.instagram.com/frontendfairy"
         target="_blank"
         rel="noreferrer"
+        style={{color: "#ceaf83"}}
         >
           Instagram
         </a> <br/>
@@ -174,6 +181,7 @@ export default function Connect() {
         href="https://www.linkedin.com/in/hope-clarke-ice"
         target="_blank"
         rel="noreferrer"
+        style={{color: "#ceaf83"}}
         >
           LinkedIn
         </a>
