@@ -2,7 +2,7 @@
 export default function LandingPage(){
 
   return (
-    <div className="root">
+    <div className="root background1">
       <span className="top">
         <div className="folio"></div>
         <h1 className="maintitle">

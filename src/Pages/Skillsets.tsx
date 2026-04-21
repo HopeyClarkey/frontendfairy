@@ -1,6 +1,6 @@
 export default function Skillsets() {
   return (
-    <div>
+    <div className="skillsets background2">
       <h1>Skillsets</h1>
 
       <div>

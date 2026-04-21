@@ -62,7 +62,7 @@ export default function Connect() {
   }
 
   return (
-    <div>
+    <div className="connect background3">
       <h1>Let's Connect</h1>
 
       <form

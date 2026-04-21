@@ -41,20 +41,21 @@ export default function Portfolio() {
   }
 
   return (
-    <div>
+    <div className= "portfolio background2">
       <h1>Blood, Sweat, & Tears</h1>
-      <div>
+      <div className="carousel carousel-vertical w-full gap-4 p-4">
         {projects.map(project => {
-          const s = slugify(project.title)
+          const s = project.slug
           const isActive = activeSlug === s
           const isReceded = activeSlug !== null && !isActive
 
           return (
             <div
+              className="carousel-item"
               key={project.title}
               data-active={isActive}
               data-receded={isReceded}
-              onClick={() => handleSelect(project.title)}
+              onClick={() => handleSelect(project.slug)}
               onMouseDown={() => handleHoldStart(project.liveUrl)}
               onMouseUp={handleHoldEnd}
               onMouseLeave={handleHoldEnd}
