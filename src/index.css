@@ -150,7 +150,7 @@ p {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
-  color: var(--text-h);
+  color: #ceaf83;
   width: fit-content;
   transition: background 0.2s ease;
   margin: 5px;

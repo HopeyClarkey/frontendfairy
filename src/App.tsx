@@ -41,7 +41,7 @@ function AppInner() {
   )
 }
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <AppInner />
@@ -49,4 +49,3 @@ function App() {
   )
 }
 
-export default App
